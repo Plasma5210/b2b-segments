@@ -1,8 +1,8 @@
 [phases.setup]
-aptPkgs = ["libgomp1"]
+nixPkgs = ["gcc", "gcc-unwrapped", "libgomp"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [start]
 cmd = "streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
