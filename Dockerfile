@@ -1,6 +1,5 @@
 FROM python:3.10-slim
 
-# libgomp1 — обязательная библиотека для LightGBM (OpenMP runtime)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
